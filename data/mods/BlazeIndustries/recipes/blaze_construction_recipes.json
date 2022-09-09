@@ -34,6 +34,17 @@
   },
   {
     "type": "construction",
+    "id": "fix_fridge",
+    "group": "fix_refrigerator",
+    "category": "FURN",
+    "required_skills": [ [ "fabrication", 0 ] ],
+    "time": "5 m",
+    "components": [ [ [ "fridge", 1 ] ] ],
+    "pre_special": "check_empty",
+    "post_terrain": "f_fridge"
+  },
+  {
+    "type": "construction",
     "id": "constr_blz_fridge_vehicle",
     "group": "convert_fridge_power_supply",
     "category": "FURN",

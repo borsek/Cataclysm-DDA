@@ -39,7 +39,7 @@
     "durability": 400,
     "description": "A medium-sized household refrigerator, converted to utilize vehicle power.  When turned on, food inside will be cooled, extending the time it has before spoiling.",
     "epower": -100,
-    "size": 1200,
+    "size": 12000,
     "item": "afs_fridge"
   },
   {
@@ -55,7 +55,7 @@
     "durability": 400,
     "description": "A household fridge, converted to run at a much lower temperature and on vehicle power.  When turned on, food inside will be frozen, completely stopping it from spoiling.",
     "epower": -120,
-    "size": 1200,
+    "size": 12000,
     "item": "afs_freezer"
   },
   {
@@ -320,5 +320,62 @@
       "repair": { "skills": [ [ "mechanics", 2 ] ], "time": "60 s" }
     },
     "flags": [ "INITIAL_PART", "FOLDABLE", "AISLE" ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "compact_ASRG_containment",
+    "name": { "str": "Compact Advanced Sterling Radioisotope Generator" },
+    "symbol": "O",
+    "categories": [ "energy" ],
+    "color": "green",
+    "broken_symbol": "B",
+    "broken_color": "red",
+    "damage_modifier": 80, 
+    "durability": 500,
+    "description": "A military-grade ASRG covered in heavy plating.  Provides constant power when plugged in to your power grid.",
+    "epower": 130,
+    "item": "compact_ASRG_containment",
+    "location": "on_roof",
+	"folded_volume": "20 L",
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 4 ] ], "time": "60 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
+      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "30 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
+      "repair": { "skills": [ [ "mechanics", 6 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] }
+    },
+    "breaks_into": [
+    {      "item": "scrap",      "count": [        4,        16      ]    },
+    {      "item": "steel_chunk",      "count": [        1,        6      ]    },
+    {      "item": "plutonium",      "charges": [        0,        3      ]    },  
+	{      "item": "lead",      "charges": [        12,        18      ]    }
+    ],
+	"flags": [ "ATOMIC_LIGHT", "LEAK_DAM", "RADIOACTIVE", "FOLDABLE","ENABLED_DRAINS_EPOWER" ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "cargo_space_anywhere",
+    "name": { "str": "cargo space below" },
+    "symbol": "=",
+    "looks_like": "box",
+    "categories": [ "cargo" ],
+    "color": "light_gray",
+    "broken_symbol": "#",
+    "broken_color": "dark_gray",
+    "durability": 250,
+    "size": 20000,
+    "//": "Based roughly on a quarter of a 2m x 1.2m pickup truck bed, assuming a reasonable amount of piling up (about 80cm, ie. sticking up around 20cm over the sides if really stacked).  Could definitely use more subtypes.",
+    "item": "cargo_rack",
+    "location": "anywhere",
+    "requirements": {
+      "install": { "skills": [ [ "mechanics", 1 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] },
+      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "30 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
+      "repair": { "skills": [ [ "mechanics", 2 ] ], "time": "60 m", "using": [ [ "repair_welding_standard", 4 ] ] }
+    },
+    "flags": [ "CARGO", "COVERED" ],
+    "breaks_into": [
+      { "item": "steel_lump", "count": [ 6, 8 ] },
+      { "item": "steel_chunk", "count": [ 6, 8 ] },
+      { "item": "scrap", "count": [ 6, 8 ] }
+    ],
+    "damage_reduction": { "all": 28 }
   }
 ]

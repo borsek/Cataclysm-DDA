@@ -23,15 +23,14 @@
       "moves": 200,
       "practice": 4,
       "done_message": "You set the beartrap."
-    },
-    "flags": [ "SINGLE_USE" ]
+    }
   },
   {
     "id": "blade_trap",
     "type": "TOOL",
     "name": { "str": "blade trap" },
     "description": "This is a machete attached laterally to a motor, with a tripwire controlling its throttle.  When the tripwire is pulled, the blade is swung around with great force.  The trap forms a 3x3 area of effect.",
-    "weight": "6142 g",
+    "weight": "2381 g",
     "volume": "4500 ml",
     "price": 5000,
     "price_postapoc": 1500,
@@ -48,8 +47,7 @@
       "moves": 400,
       "practice": 12,
       "done_message": "You set the blade trap %d squares away."
-    },
-    "flags": [ "SINGLE_USE" ]
+    }
   },
   {
     "id": "board_trap",
@@ -67,7 +65,7 @@
     "material": [ "wood" ],
     "symbol": ";",
     "color": "brown",
-    "flags": [ "STAB", "SINGLE_USE" ],
+    "flags": [ "STAB" ],
     "use_action": {
       "type": "place_trap",
       "allow_underwater": true,
@@ -96,8 +94,7 @@
       "moves": 200,
       "practice": 4,
       "done_message": "You set the booby trap up and activate the grenade."
-    },
-    "flags": [ "SINGLE_USE" ]
+    }
   },
   {
     "id": "bubblewrap",
@@ -118,8 +115,7 @@
       "moves": 150,
       "practice": 2,
       "done_message": "You set the bubble wrap on the ground, ready to be popped."
-    },
-    "flags": [ "SINGLE_USE" ]
+    }
   },
   {
     "id": "caltrops",
@@ -142,8 +138,7 @@
       "moves": 150,
       "practice": 2,
       "done_message": "You scatter the caltrops on the %s."
-    },
-    "flags": [ "SINGLE_USE" ]
+    }
   },
   {
     "id": "caltrops_glass",
@@ -165,8 +160,7 @@
       "moves": 150,
       "practice": 2,
       "done_message": "You scatter the glass caltrops on the %s."
-    },
-    "flags": [ "SINGLE_USE" ]
+    }
   },
   {
     "id": "crossbow_trap",
@@ -188,8 +182,7 @@
       "moves": 200,
       "practice": 4,
       "done_message": "You set the crossbow trap."
-    },
-    "flags": [ "SINGLE_USE" ]
+    }
   },
   {
     "id": "landmine",
@@ -213,8 +206,7 @@
       "moves": 200,
       "practice": 4,
       "done_message": "You set the land mine."
-    },
-    "flags": [ "SINGLE_USE" ]
+    }
   },
   {
     "id": "shotgun_trap",
@@ -236,8 +228,7 @@
       "moves": 225,
       "practice": 5,
       "done_message": "You set the shotgun trap."
-    },
-    "flags": [ "SINGLE_USE" ]
+    }
   },
   {
     "id": "tripwire",
@@ -259,7 +250,6 @@
       "moves": 175,
       "practice": 3,
       "done_message": "You string up the tripwire."
-    },
-    "flags": [ "SINGLE_USE" ]
+    }
   }
 ]

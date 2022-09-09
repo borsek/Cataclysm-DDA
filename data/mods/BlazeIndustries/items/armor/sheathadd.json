@@ -1,0 +1,46 @@
+[
+{
+    "result": "pikestrap",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_STORAGE",
+    "skill_used": "tailor",
+    "difficulty": 5,
+    "skills_required": [ "melee", 1 ],
+    "time": "45 m",
+    "autolearn": true,
+    "reversible": true,
+    "using": [ [ "tailoring_cotton_patchwork", 4 ] ],
+    "proficiencies": [ { "proficiency": "prof_closures" } ],
+    "components": [ [ [ "strap_large", 1, "LIST" ] ], [ [ "clasps", 1, "LIST" ] ] ]
+  },
+  {
+    "id": "pikestrap",
+    "type": "ARMOR",
+    "name": { "str": "pike strap" },
+    "description": "A leather strap tied around the torso for toting a pike while keeping your hands free.  You have to duck to get through doors while one's in it, though.  Activate to holster/draw a weapon.",
+    "weight": "160 g",
+    "volume": "500 ml",
+    "price": 8200,
+    "price_postapoc": 450,
+    "to_hit": -1,
+    "material": [ "leather" ],
+    "symbol": "[",
+    "looks_like": "bscabbard",
+    "color": "brown",
+    "material_thickness": 1,
+    "pocket_data": [
+      {
+        "holster": true,
+        "moves": 30,
+        "max_contains_volume": "4000 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "400 cm"
+      }
+    ],
+    "use_action": { "type": "holster", "holster_prompt": "Holster pike", "holster_msg": "You holster your %s." },
+    "flags": [ "BELTED", "OVERSIZE", "ALLOWS_NATURAL_ATTACKS", "WATER_FRIENDLY" ],
+    "armor": [ { "encumbrance": 4, "coverage": 10, "covers": [ "torso" ], "specifically_covers": [ "torso_hanging_back" ] } ]
+  }
+ ]

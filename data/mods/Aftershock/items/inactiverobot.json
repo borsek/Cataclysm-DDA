@@ -20,8 +20,7 @@
       "difficulty": 6,
       "moves": 100,
       "skills": [ "cooking", "computer" ]
-    },
-    "flags": [ "SINGLE_USE" ]
+    }
   },
   {
     "id": "bot_tankbot",
@@ -47,8 +46,7 @@
       "difficulty": 10,
       "moves": 500,
       "skills": [ "electronics", "computer" ]
-    },
-    "flags": [ "SINGLE_USE" ]
+    }
   },
   {
     "id": "bot_chickenbot",
@@ -99,8 +97,7 @@
       "difficulty": 15,
       "moves": 500,
       "skills": [ "electronics", "computer" ]
-    },
-    "flags": [ "SINGLE_USE" ]
+    }
   },
   {
     "type": "GENERIC",
@@ -172,8 +169,7 @@
       "difficulty": 4,
       "moves": 100,
       "skills": [ "computer" ]
-    },
-    "flags": [ "SINGLE_USE" ]
+    }
   },
   {
     "id": "bot_wraitheon_kaburaya",
@@ -196,8 +192,7 @@
       "difficulty": 1,
       "moves": 100,
       "skills": [ "throw" ]
-    },
-    "flags": [ "SINGLE_USE" ]
+    }
   },
   {
     "id": "bot_bloodhound_drone",
@@ -222,8 +217,7 @@
       "moves": 60,
       "place_randomly": true,
       "skills": [ "electronics", "computer" ]
-    },
-    "flags": [ "SINGLE_USE" ]
+    }
   },
   {
     "id": "bot_laserturret_x-ray",
@@ -245,8 +239,7 @@
       "difficulty": 6,
       "moves": 100,
       "skills": [ "electronics", "computer" ]
-    },
-    "flags": [ "SINGLE_USE" ]
+    }
   },
   {
     "id": "bot_utilibot_beehive",
@@ -284,7 +277,7 @@
       "moves": 100,
       "skills": [ "electronics", "computer" ]
     },
-    "flags": [ "LEAK_DAM", "RADIOACTIVE", "TRADER_AVOID", "SINGLE_USE" ]
+    "flags": [ "LEAK_DAM", "RADIOACTIVE", "TRADER_AVOID" ]
   },
   {
     "abstract": "bot_utilibot_base",
@@ -300,7 +293,7 @@
     "material": [ "steel", "aluminum" ],
     "symbol": ";",
     "color": "dark_gray",
-    "flags": [ "LEAK_DAM", "RADIOACTIVE", "TRADER_AVOID", "SINGLE_USE" ]
+    "flags": [ "LEAK_DAM", "RADIOACTIVE", "TRADER_AVOID" ]
   },
   {
     "abstract": "bot_hack_base",
@@ -316,8 +309,7 @@
     "cutting": 4,
     "material": [ "aluminum", "plastic" ],
     "symbol": ";",
-    "color": "light_green",
-    "flags": [ "SINGLE_USE" ]
+    "color": "light_green"
   },
   {
     "id": "bot_light_hack",
@@ -352,7 +344,7 @@
     "bashing": 8,
     "symbol": ";",
     "color": "light_gray",
-    "flags": [ "LEAK_DAM", "RADIOACTIVE", "TRADER_AVOID", "SINGLE_USE" ]
+    "flags": [ "LEAK_DAM", "RADIOACTIVE", "TRADER_AVOID" ]
   },
   {
     "id": "bot_milbot_308",
@@ -399,7 +391,7 @@
     "bashing": 6,
     "symbol": ";",
     "color": "dark_gray",
-    "flags": [ "TRADER_AVOID", "SINGLE_USE" ]
+    "flags": [ "TRADER_AVOID" ]
   },
   {
     "id": "bot_skitterbot_rat",
@@ -481,8 +473,7 @@
       "difficulty": 1,
       "moves": 100,
       "skills": [ "electronics", "computer" ]
-    },
-    "flags": [ "SINGLE_USE" ]
+    }
   },
   {
     "id": "bot_laserturret_xray",
@@ -504,7 +495,6 @@
       "difficulty": 6,
       "moves": 100,
       "skills": [ "electronics", "computer" ]
-    },
-    "flags": [ "SINGLE_USE" ]
+    }
   }
 ]

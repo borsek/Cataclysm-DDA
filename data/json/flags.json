@@ -1405,8 +1405,7 @@
   {
     "id": "IS_UPS",
     "type": "json_flag",
-    "info": "This item provides power to <info>UPS compatible items</info>.",
-    "inherit": false
+    "info": "This item provides power to <info>UPS compatible items</info>."
   },
   {
     "id": "LEAK_DAM",
@@ -1530,8 +1529,7 @@
   },
   {
     "id": "NO_UNLOAD",
-    "type": "json_flag",
-    "inherit": false
+    "type": "json_flag"
   },
   {
     "id": "NO_UNWIELD",
@@ -2088,10 +2086,5 @@
     "id": "VOLTMETER",
     "type": "json_flag",
     "info": "This tool can test for voltage."
-  },
-  {
-    "id": "SINGLE_USE",
-    "type": "json_flag",
-    "info": "This item is removed after use."
   }
 ]

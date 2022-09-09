@@ -1797,11 +1797,6 @@
     "replace": "seed_canola"
   },
   {
-    "id": "vaccine_shot",
-    "type": "MIGRATION",
-    "replace": "syringe"
-  },
-  {
     "id": "folding_bicycle",
     "type": "MIGRATION",
     "replace": "folded_bicycle",

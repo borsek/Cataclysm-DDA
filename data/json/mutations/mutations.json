@@ -655,7 +655,8 @@
     "changes_to": [ "TOUGH2" ],
     "cancels": [ "FLIMSY", "FLIMSY2", "FLIMSY3" ],
     "social_modifiers": { "intimidate": 2 },
-    "hp_modifier": 0.2
+    "hp_modifier": 0.2,
+	"category": [ "ALPHA" ]
   },
   {
     "type": "mutation",
@@ -667,7 +668,8 @@
     "prereqs": [ "TOUGH" ],
     "changes_to": [ "TOUGH3" ],
     "social_modifiers": { "intimidate": 3 },
-    "hp_modifier": 0.3
+    "hp_modifier": 0.3,
+	"category": [ "ALPHA" ]
   },
   {
     "type": "mutation",
@@ -678,7 +680,8 @@
     "valid": false,
     "prereqs": [ "TOUGH2" ],
     "social_modifiers": { "intimidate": 4 },
-    "hp_modifier": 0.4
+    "hp_modifier": 0.4,
+	"category": [ "ALPHA" ]
   },
   {
     "type": "mutation",
@@ -762,11 +765,12 @@
     "id": "GOODMEMORY",
     "name": { "str": "Good Memory" },
     "points": 3,
-    "description": "You have an exceptional memory, and find it easy to remember things.  Your skills will erode slightly slower than usual.",
+    "description": "You have an exceptional memory, and find it easy to remember things.  Your skills will erode slightly slower than usual, and you can remember more terrain.",
     "skill_rust_multiplier": 0.66,
     "starting_trait": true,
     "valid": false,
-    "cancels": [ "FORGETFUL" ]
+    "cancels": [ "FORGETFUL" ],
+    "enchantments": [ { "condition": "ALWAYS", "values": [ { "value": "MAP_MEMORY", "multiply": 1 } ] } ]
   },
   {
     "type": "mutation",
@@ -1151,7 +1155,7 @@
     "description": "You are a sight to behold.  People who care about such things will react more kindly to you.",
     "starting_trait": true,
     "types": [ "ATTRACTIVENESS" ],
-    "category": [ "ALPHA", "ELFA" ],
+    "category": [ "ALPHA" ],
     "changes_to": [ "BEAUTIFUL" ]
   },
   {
@@ -1507,12 +1511,13 @@
     "id": "FORGETFUL",
     "name": { "str": "Forgetful" },
     "points": -3,
-    "description": "You have a hard time remembering things.  Your skills will erode slightly faster than usual.",
+    "description": "You have a hard time remembering things.  Your skills will erode slightly faster than usual, and you can remember less terrain.",
     "social_modifiers": { "lie": -5 },
     "skill_rust_multiplier": 1.33,
     "starting_trait": true,
     "category": [ "BEAST", "MEDICAL", "CHIMERA", "MOUSE", "INSECT", "RABBIT" ],
-    "cancels": [ "GOODMEMORY" ]
+    "cancels": [ "GOODMEMORY" ],
+    "enchantments": [ { "condition": "ALWAYS", "values": [ { "value": "MAP_MEMORY", "multiply": -0.5 } ] } ]
   },
   {
     "type": "mutation",
@@ -4911,7 +4916,7 @@
     "description": "Your muscles are stronger.  +2 Strength.",
     "types": [ "STR" ],
     "prereqs": [ "STR_UP" ],
-    "changes_to": [ "STR_UP_3", "STR_ALPHA" ],
+    "changes_to": [ "STR_UP_3" ],
     "category": [ "LIZARD", "CATTLE", "PLANT", "ALPHA", "CHIMERA", "LUPINE", "TROGLOBITE", "BEAST", "URSINE" ],
     "passive_mods": { "str_mod": 2 }
   },
@@ -4924,9 +4929,9 @@
     "description": "Your muscles are much stronger.  +4 Strength.",
     "types": [ "STR" ],
     "prereqs": [ "STR_UP_2" ],
-    "changes_to": [ "STR_UP_4" ],
-    "category": [ "CHIMERA", "LUPINE", "TROGLOBITE", "BEAST", "URSINE", "CATTLE" ],
-    "threshreq": [ "THRESH_CHIMERA", "THRESH_LUPINE", "THRESH_TROGLOBITE", "THRESH_BEAST", "THRESH_URSINE", "THRESH_CATTLE" ],
+    "changes_to": [ "STR_UP_4", "STR_ALPHA" ],
+    "category": [ "CHIMERA", "LUPINE", "TROGLOBITE", "BEAST", "URSINE", "CATTLE", "ALPHA" ],
+    "threshreq": [ "THRESH_CHIMERA", "THRESH_LUPINE", "THRESH_TROGLOBITE", "THRESH_BEAST", "THRESH_URSINE", "THRESH_CATTLE","THRESH_ALPHA" ],
     "passive_mods": { "str_mod": 4 }
   },
   {
@@ -4950,7 +4955,7 @@
     "points": 6,
     "description": "Your muscles are perfectly developed.",
     "types": [ "STR" ],
-    "prereqs": [ "STR_UP_2" ],
+    "prereqs": [ "STR_UP_3" ],
     "threshreq": [ "THRESH_ALPHA" ],
     "category": [ "ALPHA" ],
     "passive_mods": { "str_mod": 2 }
@@ -4962,7 +4967,7 @@
     "points": 1,
     "description": "You are a little nimbler.  +1 Dexterity.",
     "types": [ "DEX" ],
-    "changes_to": [ "DEX_UP_2", "DEX_ALPHA" ],
+    "changes_to": [ "DEX_UP_2" ],
     "category": [
       "INSECT",
       "ALPHA",
@@ -4989,7 +4994,7 @@
     "types": [ "DEX" ],
     "prereqs": [ "DEX_UP" ],
     "changes_to": [ "DEX_UP_3" ],
-    "category": [ "LIZARD", "SPIDER", "CHIMERA", "RAPTOR", "MOUSE", "RABBIT", "BIRD", "ELFA", "FELINE", "CEPHALOPOD", "FISH" ],
+    "category": [ "LIZARD", "SPIDER", "CHIMERA", "RAPTOR", "MOUSE", "RABBIT", "BIRD", "ELFA", "FELINE", "CEPHALOPOD", "FISH", "ALPHA" ],
     "passive_mods": { "dex_mod": 2 }
   },
   {
@@ -5000,9 +5005,9 @@
     "description": "You are nimble and quick.  +4 Dexterity.",
     "types": [ "DEX" ],
     "prereqs": [ "DEX_UP_2" ],
-    "changes_to": [ "DEX_UP_4" ],
-    "category": [ "BIRD", "ELFA", "FELINE", "CEPHALOPOD", "FISH" ],
-    "threshreq": [ "THRESH_BIRD", "THRESH_ELFA", "THRESH_FELINE", "THRESH_CEPHALOPOD", "THRESH_FISH" ],
+    "changes_to": [ "DEX_UP_4", "DEX_ALPHA" ],
+    "category": [ "BIRD", "ELFA", "FELINE", "CEPHALOPOD", "FISH", "ALPHA" ],
+    "threshreq": [ "THRESH_BIRD", "THRESH_ELFA", "THRESH_FELINE", "THRESH_CEPHALOPOD", "THRESH_FISH", "THRESH_ALPHA" ],
     "passive_mods": { "dex_mod": 4 }
   },
   {
@@ -5024,7 +5029,7 @@
     "points": 6,
     "description": "You're perfectly coordinated.",
     "types": [ "DEX" ],
-    "prereqs": [ "DEX_UP" ],
+    "prereqs": [ "DEX_UP_3" ],
     "threshreq": [ "THRESH_ALPHA" ],
     "category": [ "ALPHA" ],
     "passive_mods": { "dex_mod": 1 }
@@ -5036,7 +5041,7 @@
     "points": 1,
     "description": "You are a little smarter.  +1 Intelligence.",
     "types": [ "INT" ],
-    "changes_to": [ "INT_UP_2", "INT_ALPHA", "INT_SLIME" ],
+    "changes_to": [ "INT_UP_2", "INT_SLIME" ],
     "category": [ "SLIME", "ALPHA", "ELFA", "CEPHALOPOD" ],
     "passive_mods": { "int_mod": 1 }
   },
@@ -5049,7 +5054,7 @@
     "types": [ "INT" ],
     "prereqs": [ "INT_UP" ],
     "changes_to": [ "INT_UP_3" ],
-    "category": [ "CEPHALOPOD" ],
+    "category": [ "CEPHALOPOD", "ALPHA" ],
     "passive_mods": { "int_mod": 2 }
   },
   {
@@ -5062,9 +5067,9 @@
     "description": "You are much smarter, and your skull bulges slightly.  +4 Intelligence.",
     "types": [ "INT" ],
     "prereqs": [ "INT_UP_2" ],
-    "changes_to": [ "INT_UP_4" ],
-    "threshreq": [ "THRESH_CEPHALOPOD" ],
-    "category": [ "CEPHALOPOD" ],
+    "changes_to": [ "INT_UP_4", "INT_ALPHA" ],
+    "threshreq": [ "THRESH_CEPHALOPOD", "THRESH_ALPHA" ],
+    "category": [ "CEPHALOPOD", "ALPHA" ],
     "passive_mods": { "int_mod": 4 }
   },
   {
@@ -5135,7 +5140,7 @@
     "description": "Your senses are keener.  +2 Perception.",
     "types": [ "PER" ],
     "prereqs": [ "PER_UP" ],
-    "changes_to": [ "PER_UP_3", "PER_ALPHA" ],
+    "changes_to": [ "PER_UP_3"],
     "category": [ "ALPHA", "CHIMERA", "BATRACHIAN", "ELFA", "RAPTOR", "BIRD", "SPIDER" ],
     "passive_mods": { "per_mod": 2 }
   },
@@ -5147,9 +5152,9 @@
     "description": "Your senses are much keener.  +4 Perception.",
     "types": [ "PER" ],
     "prereqs": [ "PER_UP_2" ],
-    "changes_to": [ "PER_UP_4" ],
-    "threshreq": [ "THRESH_ELFA", "THRESH_RAPTOR", "THRESH_BIRD" ],
-    "category": [ "ELFA", "RAPTOR", "BIRD" ],
+    "changes_to": [ "PER_UP_4", "PER_ALPHA" ],
+    "threshreq": [ "THRESH_ELFA", "THRESH_RAPTOR", "THRESH_BIRD", "THRESH_ALPHA" ],
+    "category": [ "ELFA", "RAPTOR", "BIRD", "ALPHA" ],
     "passive_mods": { "per_mod": 4 }
   },
   {
@@ -5171,7 +5176,7 @@
     "points": 6,
     "description": "Your senses are keenly honed.",
     "types": [ "PER" ],
-    "prereqs": [ "PER_UP_2" ],
+    "prereqs": [ "PER_UP_3" ],
     "threshreq": [ "THRESH_ALPHA" ],
     "category": [ "ALPHA" ],
     "passive_mods": { "per_mod": 2 }
@@ -5576,7 +5581,7 @@
     "types": [ "ATTRACTIVENESS" ],
     "prereqs": [ "PRETTY" ],
     "changes_to": [ "BEAUTIFUL2" ],
-    "category": [ "ALPHA" ]
+	"category": ["ALPHA" ]
   },
   {
     "type": "mutation",
@@ -5586,11 +5591,10 @@
     "visibility": 7,
     "ugliness": -7,
     "description": "You are a vision of beauty.  Some people will react very well to your looks, and most people will trust you immediately.",
-    "types": [ "ATTRACTIVENESS" ],
+    "types": [ "ATTRACTIVENESS"],
     "prereqs": [ "BEAUTIFUL" ],
     "changes_to": [ "BEAUTIFUL3" ],
-    "category": [ "ALPHA" ],
-    "threshreq": [ "THRESH_ALPHA" ]
+	"category": ["ALPHA" ]
   },
   {
     "type": "mutation",
@@ -5600,8 +5604,9 @@
     "visibility": 10,
     "ugliness": -10,
     "description": "You are incredibly beautiful.  People cannot help themselves due to your charms, and will do whatever they can to please you.",
-    "types": [ "ATTRACTIVENESS" ],
-    "prereqs": [ "BEAUTIFUL2" ]
+    "types": [ "ATTRACTIVENESS"],
+    "prereqs": [ "BEAUTIFUL2" ],
+	"category": ["ALPHA" ]
   },
   {
     "type": "mutation",
@@ -8047,8 +8052,7 @@
     "description": "Your body is well-adapted to resist trauma.  20% bonus to all hit points.  Stacks with Tough, etc.",
     "types": [ "DURABILITY" ],
     "changes_to": [ "TOUGH2_MEDICAL" ],
-    "category": [ "MEDICAL" ],
-    "threshreq": [ "THRESH_MEDICAL" ],
+    "category": [ "MEDICAL", "ALPHA"  ],
     "hp_modifier_secondary": 0.2
   },
   {
@@ -8060,8 +8064,8 @@
     "description": "Your body is extremely well-adapted to resist trauma.  30% bonus to all hit points.  Stacks with Tough, etc.",
     "types": [ "DURABILITY" ],
     "prereqs": [ "TOUGH_MEDICAL" ],
-    "category": [ "MEDICAL" ],
-    "threshreq": [ "THRESH_MEDICAL" ],
+    "category": [ "MEDICAL", "ALPHA" ],
+    "threshreq": [ "THRESH_MEDICAL", "THRESH_ALPHA" ],
     "hp_modifier_secondary": 0.3
   },
   {
