@@ -23,5 +23,10 @@
     "type": "construction_group",
     "id": "convert_vehicle_fridge_to_freezer",
     "name": "Convert Vehicle Fridge to Freezer"
+  },
+    {
+    "type": "construction_group",
+    "id": "fix_refrigerator",
+    "name": "Fix Refrigerator"
   }
 ]
